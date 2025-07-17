@@ -43,9 +43,10 @@ def delete_task(lista_tareas):
     for tarea in lista_tareas:
         if tarea["id"] == id_tarea:
             lista_tareas.remove(tarea)
-            print("\n---Tarea eliminada exitosamente---\n")
+            print("\n--- Tarea eliminada exitosamente ---\n")
             break
-
+    else:
+        print("\n--- Tarea no encontrada. Ingrese un ID válido ---\n")
 # Define la funcion check_task
 def check_task(lista_tareas):
 
@@ -111,13 +112,13 @@ def menu_main():
             pausar()
 
         elif option == "3":
-            # Llama a la función delete_task
-            delete_task(tareas)
+            # Llama a la función check_task
+            check_task(tareas)
             pausar()
 
         elif option == "4":
-            # Llama a la función check_task
-            check_task(tareas)
+            # Llama a la función delete_task
+            delete_task(tareas)
             pausar()
 
         elif option == "5":
