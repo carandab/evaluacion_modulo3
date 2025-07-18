@@ -1,5 +1,5 @@
 """ Evaluacion del Módulo 3 """
-
+import os
 # =============== Definiciones ===============
 
 # Lista de tareas
@@ -124,6 +124,7 @@ def menu_main():
         elif option == "5":
             # Salir del programa
             print("\n¡Hasta luego!\n")
+            os.system(f'echo "{tareas}" >> evaluación_de_modulo_3.txt')
             break
 
         else:
